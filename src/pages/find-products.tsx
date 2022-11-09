@@ -40,6 +40,7 @@ function FindProducts({ featured }) {
     if (
       filters.skinTypeFilter != null ||
       filters.concernTypeFilter != null ||
+      filters.acneProneFilter.dbTag != "" ||
       filters.mainProductCategory != null ||
       filters.keyword != "" ||
       filters.subProductCategory != null 
