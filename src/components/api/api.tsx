@@ -24,7 +24,7 @@ export const userPreferance = async (
   request["skin_tone"] = skinColor;
   request["main_product"] = mainProduct;
   request["supplimentary_product"] = supplementaryProduct;
-  const response = await axios.post(`${URL}/user/userPreferance`, request, {
+  return axios.post(`${URL}/user/userPreferance`, request, {
     headers: headers,
   });
 };
@@ -44,7 +44,7 @@ export const userRegisteration = async (
   request["first_name"] = userName;
   request["date_of_birth"] = userDOB;
   request["password"] = userPassword;
-  const response = await axios.post(`${URL}/user/signup`, request, {
+  return axios.post(`${URL}/user/signup`, request, {
     headers: headers,
   });
 };
@@ -125,7 +125,7 @@ export const verifyNumber = async (phoneNumber: number) => {
   request["phonenumber"] = phoneNumber;
   request["channel"] = "sms";
 
-  const response = await axios.post(`${URL}/verify/getcode`, request, {
+  return axios.post(`${URL}/verify/getcode`, request, {
     headers: headers,
   });
 };
@@ -139,7 +139,7 @@ export const resetVerifyCode = async (phoneNumber: number) => {
   request["phonenumber"] = phoneNumber;
   request["channel"] = "sms";
 
-  const response = await axios.post(
+  return axios.post(
     `${URL}/verify/reset-password-code`,
     request,
     {
@@ -156,7 +156,7 @@ export const verifyCode = async (userCode: number, phoneNumber: number) => {
   };
   request["to"] = phoneNumber;
   request["code"] = userCode;
-  const response = await axios.post(
+  return axios.post(
     `${URL}/verify/verifycode?phonenumber=${request["to"]}&code=${request["code"]}`,
     {
       headers: headers,
