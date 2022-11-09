@@ -83,6 +83,26 @@ export const searchProductsApi = (payload, abortController) => {
     }
   );
 };
+export function filterStatsApi(payload: string,abortController) {
+  const headers = {
+    accept: "application/json",
+    "content-type": "application/json",
+  };
+
+  return axios.post(
+    `${URL}/api/filtersStats`,
+    JSON.stringify({
+      payload,
+    }),
+
+    {
+      headers: headers,
+      signal: abortController.signal,
+    }
+  );
+
+
+}
 
 export const getFeaturedProducts = () => {
   const headers = {

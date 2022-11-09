@@ -1,10 +1,9 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from "@reduxjs/toolkit";
-import { filterStatsApi } from "../app/requests";
 
 import type { AppState } from "./store";
 import { FilterAcneProneTypes } from "../shared/mocks/consts";
-import { loadUSerPreference } from "../components/api/api";
+import { filterStatsApi, loadUSerPreference } from "../components/api/api";
 
 export interface FiltersState {
   skinTypeFilter: any;
@@ -56,14 +55,16 @@ export const filtersSlice = createSlice({
       return {
         ...state,
         concernTypeFilter: action.payload,
-        concernTypeBenefitFilter: null,
+        concernTypeBenefitFilter: action.payload?.benefits ?? null,
         currentPage: 0,
       };
     },
     setConcernTypeBenifitFilter: (state, action) => {
       return {
         ...state,
-        concernTypeBenefitFilter: action.payload,
+        concernTypeBenefitFilter: Array.isArray(action.payload)
+          ? action.payload
+          : [action.payload],
         currentPage: 0,
       };
     },
@@ -106,7 +107,6 @@ export const filtersSlice = createSlice({
     },
 
     setMainCategoryFilter: (state, action) => {
-   
       return {
         ...state,
         mainProductCategory: action.payload.mainCategory,
@@ -136,7 +136,7 @@ export const filtersSlice = createSlice({
 export const { setSkinTypeFilter, setSearchKeyword, setConcernTypeFilter } =
   filtersSlice.actions;
 
-export const getFiltersStats = () => {
+export const getFiltersStats = (abortControler) => {
   return async (dispatch, getState) => {
     let stateFilters = getState().filters;
     const requestPayLoad: any = {};
@@ -147,40 +147,42 @@ export const getFiltersStats = () => {
     if (stateFilters.skinTypeFilter)
       requestPayLoad.lables.push(stateFilters.skinTypeFilter);
 
-    if (stateFilters.concernTypeBenefitFilter) {
-      requestPayLoad.lables.push(stateFilters.concernTypeBenefitFilter.label);
-    } else if (stateFilters.concernTypeFilter?.labels) {
-      requestPayLoad.lables.push(...stateFilters.concernTypeFilter.labels);
+   if (stateFilters.concernTypeBenefitFilter?.length > 0) {
+      stateFilters.concernTypeBenefitFilter.map((item) => {
+        requestPayLoad.lables.push(item.label);
+      });
+    } else if (stateFilters.concernTypeFilter?.benefits) {
+      stateFilters.concernTypeFilter.benefits.map((item) => {
+        requestPayLoad.lables.push(item.label);
+      });
     }
 
     if (stateFilters.acneProneFilter?.key == "yes")
       requestPayLoad.lables.push(stateFilters.acneProneFilter.dbTag);
 
-  
     if (stateFilters.subProductCategory) {
       stateFilters.subProductCategory?.map((item) => {
         if (item.tag) {
           requestPayLoad.tags.push(item.tag);
         }
       });
-    }
-    else if(stateFilters.mainProductCategory){
+    } else if (stateFilters.mainProductCategory) {
       stateFilters.mainProductCategory.subCategory?.map((item) => {
         if (item.tag) {
           requestPayLoad.tags.push(item.tag);
         }
       });
-     
     }
 
     dispatch(filtersSlice.actions.setIsLoading(true));
-    filterStatsApi(requestPayLoad)
+    filterStatsApi(requestPayLoad, abortControler)
       .then((filters) => {
-        dispatch(
-          filtersSlice.actions.setFiltersStats(
-            filters?.length > 0 ? filters[0] : null
-          )
-        );
+        if (filters?.data?.length > 0) {
+          dispatch(filtersSlice.actions.setFiltersStats(filters.data[0]));
+        } else {
+          dispatch(filtersSlice.actions.setFiltersStats(null));
+        }
+
         // console.log("1dispatch(getUserPreference());")
         dispatch(getUserPreference());
       })

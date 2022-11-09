@@ -38,20 +38,20 @@ export default () => {
     else {
       return "products";
     }
-    // return (filters.subProductCategory?.tag ? filters.subProductCategory?.label: null) ?? filters.subProductCategory?.mainCategoryTag ?? ""
+ 
   };
   const getBenefitsLables = () => {
-    if (filters.concernTypeBenefitFilter) {
-      return (
-        <span className="text-danger font-weight-bold">
-          {filters.concernTypeBenefitFilter.title}
-        </span>
-      );
-    }
-    return filters.concernTypeFilter.benefits?.map((benefit, index) => {
-      return filters.concernTypeFilter.benefits.length == 1 ? (
+    // if (filters.concernTypeBenefitFilter) {
+    //   return (
+    //     <span className="text-danger font-weight-bold">
+    //       {filters.concernTypeBenefitFilter.title}
+    //     </span>
+    //   );
+    // }
+    return filters.concernTypeBenefitFilter?.map((benefit, index) => {
+      return filters.concernTypeBenefitFilter?.length == 1 ? (
         <span className="text-danger font-weight-bold"> {benefit.title}</span>
-      ) : index == filters.concernTypeFilter.benefits.length - 1 ? (
+      ) : index == filters.concernTypeBenefitFilter?.length - 1 ? (
         <>
           <span className="text-dark font-weight-bold"> and</span>&nbsp;
           <span className="text-danger font-weight-bold">{benefit.title}</span>
@@ -59,7 +59,7 @@ export default () => {
       ) : (
         <span className="text-danger font-weight-bold">
           {benefit.title}
-          {index == filters.concernTypeFilter.benefits.length - 2 ? "" : ", "}
+          {index == filters.concernTypeBenefitFilter?.length - 2 ? "" : ", "}
         </span>
       );
     });

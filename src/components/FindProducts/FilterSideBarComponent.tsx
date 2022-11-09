@@ -53,7 +53,7 @@ function Sidebar() {
     isCategoryExpended: false,
   });
   const abortcontrolerRef = useRef(new AbortController());
-
+  const abortControlerFilterRef = useRef(new AbortController());
   const handlePriceRangeChange = (
     event: Event,
     newValue: number | number[]
@@ -72,7 +72,11 @@ function Sidebar() {
   };
   const concernTypeSelectedBenefitFliterChanged = (benefitIndex) => {
     if (benefitIndex >= 0) {
-      dispatch(updateConcernTypeBenefitFilter(filters.concernTypeFilter?.benefits[benefitIndex]));
+      dispatch(
+        updateConcernTypeBenefitFilter(
+          filters.concernTypeFilter?.benefits[benefitIndex]
+        )
+      );
     } else {
       dispatch(updateConcernTypeBenefitFilter(null));
     }
@@ -93,11 +97,11 @@ function Sidebar() {
     );
   };
 
-  const debouncedFilterStats = useRef(
-    _.debounce(() => {
-      dispatch(getFiltersStats());
-    }, 1000)
-  ).current;
+  const debouncedFilterStats = useRef(() => {
+    abortControlerFilterRef.current?.abort();
+    abortControlerFilterRef.current = new AbortController();
+    dispatch(getFiltersStats(abortControlerFilterRef.current));
+  }).current;
 
   useEffect(debouncedFilterStats, [
     filters.skinTypeFilter,
@@ -115,7 +119,6 @@ function Sidebar() {
       dispatch(searchProducts(abortcontrolerRef.current));
     }, 500)
   ).current;
-
 
   useEffect(debouncedSearch, [
     filters.skinTypeFilter,
@@ -188,6 +191,7 @@ function Sidebar() {
 
   const handleRemoveFitlerClick = (tagType, tag) => {
     return () => {
+      if (filters.isLodingFiltersStatics) return;
       if (tagType == "tag") {
         // let subCategoryFoundToRemove = filters.subProductCategory?.find((item)=>item.tag == tag)
 
@@ -205,14 +209,15 @@ function Sidebar() {
           dispatch(updateSkinTypeFilter(""));
         } else if (filters.acneProneFilter?.dbTag === tag) {
           dispatch(updateAcneTypeFilter(FilterAcneProneTypes[0]));
-        } else if (filters.concernTypeFilter?.labels?.includes(tag)) {
-          let concernTypeFilter = { ...filters.concernTypeFilter };
-          concernTypeFilter.labels = concernTypeFilter.labels.filter(
-            (item) => item !== tag
+        } else if (filters.concernTypeBenefitFilter?.length>0) {
+          let concernTypeFilter = filters.concernTypeBenefitFilter?.filter(
+            (item) => item.label !== tag
           );
-          if (concernTypeFilter.labels?.length == 0)
+          if (concernTypeFilter?.length == 0){
             dispatch(updateConcernTypeFilter(null));
-          else dispatch(updateConcernTypeFilter(concernTypeFilter));
+          }
+            
+          else dispatch(updateConcernTypeBenefitFilter(concernTypeFilter));
         }
       }
     };
@@ -270,7 +275,7 @@ function Sidebar() {
               <DropdownButton
                 id="dropdown-benefits"
                 className={`${styles.skin_benefit_dropdown} mb-3 `}
-                title={filters.concernTypeBenefitFilter?.title ?? "All"}
+                title={filters.concernTypeBenefitFilter?.length == 1 ? filters.concernTypeBenefitFilter[0].title : "All"}
                 disabled={!filters.concernTypeFilter}
                 onSelect={concernTypeSelectedBenefitFliterChanged}
               >
@@ -315,8 +320,7 @@ function Sidebar() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails className="p-0">
-          <Form 
-          >
+          <Form>
             {FilterSkinTypes.map((item) => (
               <Form.Check
                 label={item.title}
@@ -546,19 +550,17 @@ function Sidebar() {
         variant="subtitle1"
         className={`${styles.sidebar_accordian} mb-3`}
       >
-        Active Filters
-      </Typography>
-      <div className="d-flex justify-content-center">
+        Active Filters{" "}
         <Spinner
           size="sm"
-          animation="border"
+          animation="grow"
           className={
             filters.isLodingFiltersStatics
-              ? "text-danger "
-              : "text-danger invisible"
+              ? "text-danger mx-4"
+              : "text-danger invisible mx-4"
           }
         />
-      </div>
+      </Typography>
 
       <ul className={`${styles.active_filters_list}`}>
         {filters.filtersStats?.tagStat?.map((item, index) => {

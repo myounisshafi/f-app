@@ -45,19 +45,6 @@ export function searchItem(payload: string): Promise<Array<any>> {
     .then((res) => res);
 }
 
-export function filterStatsApi(payload: string): Promise<Array<any>> {
-  return fetch("/api/filtersStats", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      payload,
-    }),
-  })
-    .then((response) => response.json())
-    .then((res) => res);
-}
 
 
 interface Response {

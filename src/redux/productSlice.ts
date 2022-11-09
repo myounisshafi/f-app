@@ -131,6 +131,7 @@ export const ratingsState = (state: AppState) => state.products.ratings;
 export const reviewsState = (state: AppState) => state.products.reviews;
 export const filterReviewState = (state: AppState) =>
   state.products.filterReview;
+  
 // later
 export const searchProducts = (abortControler) => {
   return async (dispatch, getState) => {
@@ -151,10 +152,15 @@ export const searchProducts = (abortControler) => {
     if (stateFilters.skinTypeFilter)
       requestPayLoad.lables.push(stateFilters.skinTypeFilter);
 
-    if (stateFilters.concernTypeBenefitFilter) {
-      requestPayLoad.lables.push(stateFilters.concernTypeBenefitFilter.label);
-    } else if (stateFilters.concernTypeFilter?.labels) {
-      requestPayLoad.lables.push(...stateFilters.concernTypeFilter.labels);
+      if (stateFilters.concernTypeBenefitFilter?.length > 0) {
+        stateFilters.concernTypeBenefitFilter.map((item) => {
+          requestPayLoad.lables.push(item.label);
+        });
+      } else if (stateFilters.concernTypeFilter?.benefits) {
+      stateFilters.concernTypeFilter.benefits.map((item)=>{
+        requestPayLoad.lables.push(item.label);
+      })
+     
     }
     if (stateFilters.acneProneFilter?.key == "yes")
       requestPayLoad.lables.push(stateFilters.acneProneFilter.dbTag);
