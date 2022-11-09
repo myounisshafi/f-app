@@ -164,14 +164,14 @@ function Header(props: { state: unknown; setState: (arg0: boolean) => void }) {
     verifyCode(userCode, userPhoneNumber.current)
       .then((response) => {
         if (type == "login") {
-          if (response.data.valid == true) {
+          if (response?.data.valid == true) {
             setCodeShow(false);
             setCreatePassShow(true);
           } else {
             setIncorrectCode(true);
           }
         } else if (type == "reset-password") {
-          if (response.data.valid == true) {
+          if (response?.data.valid == true) {
             setForget(false);
             setReset(true);
             setIncorrectCode(false);
