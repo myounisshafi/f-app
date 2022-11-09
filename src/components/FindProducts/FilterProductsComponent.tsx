@@ -38,31 +38,42 @@ export default () => {
     else {
       return "products";
     }
- 
   };
   const getBenefitsLables = () => {
-    // if (filters.concernTypeBenefitFilter) {
-    //   return (
-    //     <span className="text-danger font-weight-bold">
-    //       {filters.concernTypeBenefitFilter.title}
-    //     </span>
-    //   );
-    // }
-    return filters.concernTypeBenefitFilter?.map((benefit, index) => {
-      return filters.concernTypeBenefitFilter?.length == 1 ? (
-        <span className="text-danger font-weight-bold"> {benefit.title}</span>
-      ) : index == filters.concernTypeBenefitFilter?.length - 1 ? (
+    const benefitsLabels = [];
+    if (filters.skinTypeFilter)
+      benefitsLabels.push(
+        FilterLabelBenefitsTitles[filters.skinTypeFilter] ??
+          filters.skinTypeFilter ??
+          null
+      );
+    if (filters.acneProneFilter.dbTag)
+      benefitsLabels.push(
+        FilterLabelBenefitsTitles[filters.acneProneFilter.dbTag] ??
+          filters.acneProneFilter.dbTag ??
+          null
+      );
+    filters.concernTypeBenefitFilter?.map((benefit, index) => {
+      benefitsLabels.push(benefit.title);
+    });
+
+    return benefitsLabels?.map((benefit, index) => {
+      return benefitsLabels?.length == 1 ? (
+        <span className="text-danger font-weight-bold">{benefit}</span>
+      ) : index == benefitsLabels?.length - 1 ? (
         <>
           <span className="text-dark font-weight-bold"> and</span>&nbsp;
-          <span className="text-danger font-weight-bold">{benefit.title}</span>
+          <span className="text-danger font-weight-bold">{benefit}</span>
         </>
       ) : (
         <span className="text-danger font-weight-bold">
-          {benefit.title}
-          {index == filters.concernTypeBenefitFilter?.length - 2 ? "" : ", "}
+          {benefit}
+          {index == benefitsLabels?.length - 2 ? "" : ", "}
         </span>
       );
     });
+
+  
   };
   const getHeaderText = () => {
     if (
@@ -78,44 +89,25 @@ export default () => {
           found for current selected filters.
         </h4>
       );
-    } else if (filters.concernTypeFilter && filters.skinTypeFilter) {
+    } else {
       return (
         <h4 className="font-size-16 mt-5 mx-3">
-          Concerned about&nbsp;
-          <span className="text-danger font-weight-bold">
-            {` ${filters.concernTypeFilter.title}`}
-          </span>
-          ? Hi, these {getCategoryTtitle()} have the most reviews that mention
+          {filters.concernTypeFilter && (
+            <>
+              Concerned about&nbsp;
+              <span className="text-danger font-weight-bold">
+                {` ${filters.concernTypeFilter.title}`}
+              </span>
+              ?
+            </>
+          )}{" "}
+          Hi, these {getCategoryTtitle()} have the most reviews that mention
           good for&nbsp;
-          <span className="text-danger font-weight-bold">
-            {FilterLabelBenefitsTitles[filters.skinTypeFilter]}
-          </span>
-          , {getBenefitsLables()}.
-        </h4>
-      );
-    } else if (filters.concernTypeFilter) {
-      return (
-        <h4 className="font-size-16 mt-5 mx-3">
-          Concerned about
-          <span className="text-danger font-weight-bold">
-            {` ${filters.concernTypeFilter.title}`}
-          </span>
-          ? Hi, these {getCategoryTtitle()} have the most reviews that
-          mention&nbsp;
           {getBenefitsLables()}.
         </h4>
       );
-    }else if (filters.skinTypeFilter) {
-      return (
-        <h4 className="font-size-16 mt-5 mx-3">
-          Hi, these {getCategoryTtitle()} have the most reviews that mention
-          good for&nbsp;
-          <span className="text-danger font-weight-bold">
-            {FilterLabelBenefitsTitles[filters.skinTypeFilter]}
-          </span>.
-        </h4>
-      );
     }
+
     return "";
   };
 
@@ -159,7 +151,6 @@ export default () => {
                   key={index}
                   active={index === filters.currentPage}
                   onClick={handlePaginationChange(index)}
-       
                   value={index}
                   className="my-2"
                 >
