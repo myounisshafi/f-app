@@ -44,8 +44,8 @@ function Header(props: { state: unknown; setState: (arg0: boolean) => void }) {
   const [showToggler, setShowToggler] = useState(false);
   const dispatch = useAppDispatch();
   const isUserLogin = useAppSelector(isUserLoginSelector);
-  const refSearchInput = useRef();
-  const refSearchCollapsed = useRef();
+  const refSearchInput = useRef<any>();
+  const refSearchCollapsed = useRef<any>();
   const [skin, setSkin] = useState({
     skinType: "",
     skinConcern: "",
@@ -227,13 +227,13 @@ function Header(props: { state: unknown; setState: (arg0: boolean) => void }) {
   };
 
   const doSearch = () => {
-    if (refSearchInput.current?.value.trim() !== "")
+    if (refSearchInput?.current?.value.trim() !== "")
       dispatch(
-        setSearchKeyword({ keyword: refSearchInput.current.value.trim() })
+        setSearchKeyword({ keyword: refSearchInput?.current.value.trim() })
       );
     else
       dispatch(
-        setSearchKeyword({ keyword: refSearchCollapsed.current?.value })
+        setSearchKeyword({ keyword: refSearchCollapsed?.current?.value })
       );
   };
   useEffect(() => {
