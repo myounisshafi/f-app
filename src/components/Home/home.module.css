@@ -1,0 +1,1478 @@
+@font-face {
+  font-family: "Carmen_Sans";
+  src: url("../../../public/fonts/CarmenSans-Regular.woff2") format("woff2"),
+    url("../../../public/fonts/CarmenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Carmen_Sans_bold";
+  src: url("../../../public/fonts/CarmenSans-Bold.woff2") format("woff2"),
+    url("../../../public/fonts/CarmenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Carmen_Sans_ExtraBold";
+  src: url("../../../public/fonts/CarmenSans-ExtraBold.woff2") format("woff2"),
+    url("../../../public/fonts/CarmenSans-ExtraBold.woff") format("woff");
+}
+
+.section__two {
+  background-color: #ecf2ff;
+  padding: 100px 20px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.sec_six_img_mobile {
+  display: none !important;
+}
+
+.pink {
+  color: #fc7791;
+  font-family: "Carmen_Sans_ExtraBold" !important;
+}
+
+.right__side {
+  padding-top: 110px;
+  font-family: "Carmen_Sans" !important;
+  padding-left: 20px;
+}
+
+.small__text {
+  color: #565656 !important;
+  font-size: 22px !important;
+  line-height: 30px !important;
+  font-family: "Carmen_Sans" !important;
+  width: 90%;
+}
+
+.right__side h2 {
+  font-weight: 900;
+  font-family: "Carmen_Sans_ExtraBold" !important;
+  line-height: 1.4;
+}
+
+.review__button {
+  background-color: #fc7791 !important;
+  color: #fff !important;
+  border-radius: 31px !important;
+  padding: 10px 30px !important;
+  letter-spacing: 0px !important;
+  text-transform: unset !important;
+  box-shadow: none !important;
+  font-size: 20px !important;
+  margin-top: 50px !important;
+  font-weight: bolder !important;
+  font-family: "Carmen_Sans_bold" !important;
+}
+
+.explore__review {
+  color: #7a7878 !important;
+  text-decoration: underline !important;
+  margin-top: 64px !important;
+  font-size: 19px !important;
+  cursor: pointer !important;
+  display: inline-block;
+  margin-left: 30px !important;
+  text-transform: unset !important;
+  font-family: "Carmen_Sans" !important;
+}
+
+.explore__review:hover {
+  background: none !important;
+}
+
+.community {
+  font-family: "Carmen_Sans_ExtraBold" !important;
+  font-size: 44px !important;
+  font-weight: bolder !important;
+}
+
+.skin_care_summaries {
+  font-family: "Carmen_Sans_ExtraBold" !important;
+}
+
+.section__five h3 {
+  font-family: "Carmen_Sans_ExtraBold" !important;
+}
+
+.section__three {
+  padding: 100px 0px 100px 100px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.section__three p {
+  font-size: 22px;
+  line-height: 30px;
+  color: #565656;
+  font-family: "Carmen_Sans" !important;
+}
+
+.about__us {
+  background-color: #000 !important;
+  color: #fff !important;
+  padding: 10px 40px !important;
+  border-radius: 8px !important;
+  letter-spacing: 0px !important;
+  box-shadow: none !important;
+  font-weight: 700 !important;
+  text-transform: unset !important;
+  margin-top: 30px !important;
+  font-family: "Carmen_Sans_bold" !important;
+  font-size: 20px !important;
+}
+
+.section__five {
+  padding: 100px 50px 100px 50px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.join__fluffie button {
+  background-color: #fc7791 !important;
+  color: #fff !important;
+  border-radius: 31px !important;
+  padding: 10px 40px;
+  box-shadow: none;
+  margin-top: 20px;
+  font-weight: 700;
+  text-transform: unset !important;
+  margin-top: 40px;
+  font-family: "Carmen_Sans_bold" !important;
+  box-shadow: none !important;
+  font-size: 20px !important;
+}
+
+.join__fluffie {
+  float: right;
+  font-family: "Carmen_Sans" !important;
+}
+
+.section__four {
+  padding: 100px 0px 0px;
+  background-color: #fc7791 !important;
+  font-family: "Carmen_Sans" !important;
+}
+
+.section__six {
+  background-color: #ecf2ff;
+  /* padding: 100px 0px; */
+  padding: 100px 100px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.claim__section {
+  position: relative;
+  font-family: "Carmen_Sans" !important;
+}
+
+.claim__text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  font-family: "Carmen_Sans" !important;
+}
+
+.claim__arrow {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  font-family: "Carmen_Sans" !important;
+}
+
+.claim__section h2 {
+  font-family: "Carmen_Sans_ExtraBold" !important;
+  font-size: 45px;
+}
+
+.claim__section p {
+  font-size: 22px;
+  line-height: 30px;
+  margin-top: 50px;
+  color: #565656;
+  width: 80%;
+  font-family: "Carmen_Sans" !important;
+}
+
+.banner {
+  padding: 5% 140px 0% 125px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.banner__left__heading {
+  justify-content: center;
+  align-self: center;
+}
+
+.banner__left__paragraph p {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 700px;
+  color: #565656;
+  font-size: 22px;
+  width: 50%;
+  line-height: 30px;
+  margin-top: 30px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.banner__joinUs {
+  margin-top: 50px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.banner__left__heading h1 {
+  font-size: 60px;
+  font-weight: 900;
+  word-spacing: 0.1rem;
+  line-height: 86px;
+  font-family: "Carmen_Sans_ExtraBold" !important;
+}
+
+.banner__left__heading span {
+  display: inline-block;
+  color: #fd7791 !important;
+  font-family: "Carmen_Sans_ExtraBold" !important;
+}
+
+.product__info__sec h1 {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 36px;
+  font-family: "Carmen_Sans_ExtraBold" !important;
+}
+
+.product__info__sec .drunk {
+  display: inline-block;
+  color: #949393;
+  font-family: "Carmen_Sans" !important;
+}
+
+.Learn__more a {
+  text-decoration: none;
+  color: #656565;
+  font-size: 20px;
+  text-decoration: none;
+  /* padding-left: 20px; */
+  margin-left: 20px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #656565;
+  font-family: "Carmen_Sans" !important;
+}
+
+.Learn__more {
+  margin-top: 5px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.progress__bar div {
+  background-color: #161313 !important;
+  font-family: "Carmen_Sans" !important;
+}
+
+.progress__bar {
+  height: 10px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.pink__btn {
+  background: #fd7791 !important;
+  border: none !important;
+  border-radius: 25px !important;
+  font-size: 20px !important;
+  color: #fff !important;
+  text-transform: unset !important;
+  font-weight: 900;
+  padding: 6px 40px !important;
+  font-family: "Carmen_Sans_bold" !important;
+}
+
+.slides {
+  border-radius: 50%;
+  color: #d4d4d4;
+  border: 1px solid #d4d4d4;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  padding: 7px 14px;
+  margin-bottom: 20px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.digit_slider {
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+.img_power {
+  max-width: 120px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.card_wrapper {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  height: 530px;
+  background: #fff;
+  padding: 15px 40px 30px 40px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-family: "Carmen_Sans" !important;
+}
+
+.card_wrapper h3 {
+  font-weight: 900;
+  font-size: 24px !important;
+}
+
+.card_wrapper h4 {
+  font-family: "Carmen_Sans_ExtraBold" !important;
+  font-size: 20px !important;
+}
+
+.pros_card h4 {
+  position: relative;
+}
+
+.pros_card_one h4 {
+  position: relative;
+}
+
+.pros_card_two h4 {
+  position: relative;
+}
+
+.pros_card_three h4 {
+  position: relative;
+}
+
+.pros_card h4::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 60px;
+  right: 0px;
+  height: 0.5em;
+  border-top: 1px solid #ededed;
+  z-index: 1;
+}
+
+.pros_card_one h4::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 90px;
+  right: 0px;
+  height: 0.5em;
+  border-top: 1px solid #ededed;
+  z-index: 1;
+}
+
+.pros_card_two h4::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 107px;
+  right: 0px;
+  height: 0.5em;
+  border-top: 1px solid #ededed;
+  z-index: 1;
+}
+
+.pros_card_three h4::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 118px;
+  right: 0px;
+  height: 0.5em;
+  border-top: 1px solid #ededed;
+  z-index: 1;
+}
+
+.drunk {
+  display: inline-block;
+  color: #656565;
+  font-family: "Carmen_Sans" !important;
+  font-size: 14px;
+}
+
+.pros_card ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Carmen_Sans" !important;
+}
+
+.pros_card ul li {
+  font-size: 16px !important;
+  font-family: "Carmen_Sans" !important;
+}
+
+.sec_two_image_mobile {
+  display: none;
+}
+
+.sec_four_slider_p {
+  font-size: 22px !important;
+  padding-top: 100px;
+}
+
+@media (max-width: 550px) {
+  .card_wrapper h4 {
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    font-size: 12px !important;
+    margin: 0px !important;
+  }
+
+  .pros_card_one h4::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 58px;
+    right: 0px;
+    height: 0.5em;
+    border-top: 1px solid #ededed;
+    z-index: 1;
+  }
+
+  .pros_card_two h4::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 68px;
+    right: 0px;
+    height: 0.5em;
+    border-top: 1px solid #ededed;
+    z-index: 1;
+  }
+
+  .pros_card h4::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 35px;
+    right: 0px;
+    height: 0.5em;
+    border-top: 1px solid #ededed;
+    z-index: 1;
+  }
+
+  .pros_card_three h4::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 68px;
+    right: 0px;
+    height: 0.5em;
+    border-top: 1px solid #ededed;
+    z-index: 1;
+  }
+
+  .pros_card_three {
+    margin-bottom: 0px !important;
+    padding: 0px !important;
+  }
+
+  .sec_four_slider_p {
+    font-size: 13px !important;
+    padding-top: 20px !important;
+  }
+
+  .card_bottom_drunk .drunk {
+    display: inline-block !important;
+    padding-bottom: 15px !important;
+  }
+
+  .span_space {
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px 0px 0px 0px !important;
+    align-self: center;
+    align-items: center;
+  }
+
+  .cstm_space {
+    margin: 0px !important;
+    padding-top: 5px;
+    /* padding: 0px !important; */
+  }
+
+  .tables_slider span {
+    font-size: 8px !important;
+  }
+
+  .slider_p {
+    font-size: 9px !important;
+  }
+
+  .section__six .MuiSvgIcon-root {
+    display: none !important;
+  }
+
+  .claim__arrow {
+    display: none;
+  }
+
+  .searchIcon {
+    right: 12px !important;
+  }
+
+  .card_wrapper {
+    min-height: 375px;
+    height: auto;
+    margin-top: 25px !important;
+  }
+
+  .skin_care_summaries {
+    font-size: 26px !important;
+  }
+
+  .small__text {
+    color: #565656 !important;
+    text-align: center;
+    font-size: 15px !important;
+    line-height: 23px !important;
+    font-family: "Carmen_Sans" !important;
+    width: 90%;
+  }
+
+  .real_img {
+    width: 30px !important;
+    margin-top: -5px !important;
+  }
+
+  .sec_six_img_mobile {
+    display: block !important;
+    max-width: 180px;
+    padding-top: 20px;
+    margin: auto;
+  }
+
+  .banner {
+    /* height: 100vh !important;
+    padding: 70px 20px !important; */
+  }
+
+  .banner__left__heading {
+    display: block;
+  }
+
+  .right__side h2 {
+    font-weight: 500;
+    font-family: "Carmen_Sans" !important;
+    font-size: 38px;
+  }
+
+  .community {
+    font-weight: 500;
+    font-family: "Carmen_Sans_bold" !important;
+    font-size: 28px !important;
+    text-align: center;
+    line-height: 34px;
+  }
+
+  .right__side {
+    padding-top: 30px !important;
+    font-family: "Carmen_Sans" !important;
+    padding-left: 0px !important;
+    padding-bottom: 30px !important;
+  }
+  .progrss_bar_spacing {
+    margin-top: 2px !important;
+  }
+  .progrss_bar_spacing_top {
+    margin-top: 10px !important;
+  }
+  .banner__left__paragraph p {
+    padding: 0px 15px !important;
+    font-size: 15px !important;
+    width: 86% !important;
+    text-align: center;
+    line-height: 17px !important;
+    color: #fff !important;
+    margin: auto;
+  }
+
+  .section__three p {
+    font-size: 14px;
+    line-height: 17px;
+    color: #565656;
+    text-align: center;
+    font-family: "Carmen_Sans" !important;
+    padding-top: 20px;
+    width: 89% !important;
+    margin: auto;
+    padding-bottom: 30px;
+    padding: 30px 0px;
+  }
+
+  .sec_two_image_desc {
+    display: none;
+  }
+
+  .sec_two_image_mobile {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 191px;
+    margin: auto;
+  }
+
+  .progress_width .progress__bar {
+    height: 6px !important;
+    line-height: 2px !important;
+  }
+
+  .right_icon {
+    font-size: 15px !important;
+    align-self: center !important;
+    color: #7d7d7d !important;
+  }
+
+  .background_div {
+    display: none;
+  }
+
+  .pros_card_three {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .about__us {
+    padding: 5px 40px !important;
+    border-radius: 27px !important;
+    margin: auto !important;
+    font-size: 14px !important;
+    margin-top: 10px !important;
+  }
+
+  .section__five {
+    padding: 20px 30px;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .claim__section {
+    padding: 20px 30px;
+  }
+
+  .star_icon {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .mobile_star_icon {
+    font-size: 12px !important;
+  }
+  .claim__text {
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .claim__section h2 {
+    font-size: 28px;
+    text-align: center;
+    line-height: 34px;
+  }
+
+  .banner__joinUs {
+    padding: 0 !important;
+    margin-top: 30px !important;
+    justify-content: center;
+  }
+
+  .review__button {
+    padding: 10px;
+  }
+
+  .css-1sra7t5-MuiTypography-root,
+  .css-i1hrn3-MuiTypography-root {
+    font-size: 2.75rem;
+  }
+
+  .css-i1hrn3-MuiTypography-root {
+    font-size: 2.75rem !important;
+  }
+
+  .join__fluffie {
+    float: none;
+  }
+
+  .right__side h2 {
+    font-weight: 900 !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    line-height: 1.4 !important;
+    font-size: 28px !important;
+    text-align: center !important;
+    width: 86% !important;
+    margin: auto !important;
+  }
+
+  .ms_two {
+    padding-left: 30px !important;
+  }
+
+  .reviews_spacing {
+    padding-left: 0px !important;
+  }
+
+  .real_img {
+    margin-top: -13px !important;
+    margin-left: 5px;
+    width: 26px !important;
+  }
+
+  .small__text {
+    color: #565656 !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+    font-family: "Carmen_Sans" !important;
+    width: 80% !important;
+    text-align: center;
+    margin: auto !important;
+    padding-top: 20px !important;
+  }
+
+  .sec_six_img_desktop {
+    display: none !important;
+  }
+
+  .review__button {
+    background-color: #fc7791 !important;
+    color: #fff !important;
+    border-radius: 31px !important;
+    padding: 5px 15px !important;
+    letter-spacing: 0px !important;
+    text-transform: unset !important;
+    box-shadow: none !important;
+    font-size: 15px !important;
+    margin-top: 0px !important;
+    font-weight: bolder !important;
+    margin-right: 10px;
+    font-family: "Carmen_Sans_bold" !important;
+  }
+
+  .claim__arrow {
+    display: none !important;
+  }
+
+  .explore__review {
+    color: #7a7878 !important;
+    text-decoration: underline !important;
+    margin-top: 10px !important;
+    font-size: 15px !important;
+    margin-left: 10px !important;
+    cursor: pointer !important;
+    display: inline-block;
+
+    text-transform: unset !important;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .center_post {
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .section__three {
+    padding: 60px 20px 60px 20px;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .about_us {
+    padding-left: 10px !important;
+  }
+
+  .section__six {
+    background-color: #ecf2ff;
+    padding: 100px 0px;
+    padding: 20px 20px;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .claim__arrow {
+    display: none;
+  }
+
+  .section__five {
+    padding: 30px 20px !important;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .section__five {
+    margin: 30px 0px !important;
+  }
+
+  .section__five h3 {
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    font-size: 28px !important;
+    text-align: center;
+    line-height: 34px;
+  }
+
+  .join__fluffie button {
+    margin: auto;
+    background-color: #fc7791 !important;
+    color: #fff !important;
+    border-radius: 31px !important;
+    padding: 4px 30px;
+    box-shadow: none;
+    margin-top: 20px;
+    font-weight: 700;
+    text-transform: unset !important;
+    margin-top: 20px;
+    font-family: "Carmen_Sans_bold" !important;
+    box-shadow: none !important;
+    font-size: 15px !important;
+  }
+
+  .claim__section p {
+    line-height: 17px;
+    margin-top: 0px;
+    color: #565656;
+    width: 76%;
+    text-align: center;
+    font-family: "Carmen_Sans" !important;
+    font-size: 14px;
+    padding-top: 20px !important;
+    padding-bottom: 15px !important;
+    margin: auto;
+  }
+
+  .find_pro {
+    margin: auto !important;
+  }
+
+  .claim__text .review__button {
+    margin-top: 20px !important;
+  }
+
+  .slider_p p {
+    font-size: 9px;
+  }
+
+  .background_div {
+    width: 78% !important;
+    height: 59% !important;
+  }
+
+  .card_wrapper {
+    padding: 5px 20px 20px 20px;
+  }
+
+  .card_wrapper h3 {
+    font-size: 12px !important;
+    font-family: "Carmen_Sans_bold" !important;
+    margin-bottom: 0 !important;
+  }
+
+  .drunk {
+    font-family: "Carmen_Sans" !important;
+    font-size: 8px;
+  }
+
+  .pros_card ul {
+    padding-left: 8px !important;
+  }
+
+  .pros_card ul li {
+    font-size: 9px !important;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .img_power {
+    width: 100% !important;
+  }
+
+  .abc {
+    font-size: 8px;
+  }
+
+  .span_cstm {
+    font-size: 8px !important;
+    color: #7d7d7d;
+  }
+  .span_cstm .black_span {
+    font-size: 8px !important;
+    color: #000 !important;
+  }
+
+  .product__info__sec h1 {
+    font-weight: 700 !important;
+    line-height: 36px;
+    height: 76px !important;
+    font-size: 26px !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    text-overflow: ellipsis !important;
+    width: auto;
+    overflow: hidden;
+    white-space: initial;
+  }
+
+  .pink__btn {
+    background: #000 !important;
+    border: none !important;
+    border-radius: 25px !important;
+    font-size: 15px !important;
+    color: #fff !important;
+    text-transform: unset !important;
+    font-weight: 900;
+    padding: 5px 25px 0px 25px !important;
+    font-family: "Carmen_Sans_bold" !important;
+    margin-top: 5px !important;
+  }
+
+  .Learn__more a {
+    text-decoration: none;
+    color: #fff !important;
+    font-size: 15px;
+    text-decoration: none;
+
+    margin-left: 20px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #fff;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .banner_right_side {
+    display: none;
+  }
+
+  .section__two {
+    padding: 0px 20px !important;
+    height: 100vh;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    align-self: center;
+  }
+}
+
+@media (max-width: 1600px) {
+  .cstm__navBar {
+    padding-left: 320px !important;
+  }
+
+  .claim__text {
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .claim__arrow {
+    top: 46%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 40px;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .banner {
+    padding: 5% 5% 0% 5%;
+  }
+
+  .banner__left__paragraph p {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 10px 0px;
+    max-width: 602px;
+    width: 470px;
+    color: #565656;
+    font-size: 20px;
+  }
+
+  .container__inner {
+    width: 100%;
+    padding: 0px 60px;
+  }
+
+  .banner__left__heading h1 {
+    font-size: 55px !important;
+    font-weight: 700;
+    /* word-spacing: 0.5rem;
+    letter-spacing: 0.2rem; */
+    word-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
+    line-height: 65px;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+  }
+
+  .product__info__sec h1 {
+    font-weight: 700 !important;
+    line-height: 36px;
+    height: 76px !important;
+    font-size: 26px !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+  }
+
+  .banner__left__paragraph p {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 700px;
+    color: #565656;
+    font-size: 22px;
+    width: 90%;
+    line-height: 30px;
+    margin-top: 30px;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .right__side h2 {
+    font-weight: 900 !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    line-height: 1.4 !important;
+    font-size: 49px;
+  }
+
+  .reviews_spacing {
+    /* padding-left: 10px !important; */
+    /* margin-left: 5px !important; */
+  }
+
+  .ms_two {
+    margin-left: 16px !important;
+    /* margin: 0 !important; */
+    margin-right: 0px !important;
+  }
+
+  .reviews_spacing {
+    padding-left: 0px !important;
+    /* margin-left: 5px !important; */
+  }
+}
+
+@media (max-width: 1620px) {
+  .ms_two {
+    margin-left: 11px !important;
+    /* margin: 0 !important; */
+    margin-right: 0px !important;
+  }
+
+  .reviews_spacing {
+    padding-left: 10px;
+    /* margin-left: 5px !important; */
+  }
+}
+
+@media (max-width: 810px) {
+  .cstm__search input {
+    margin-left: 20px;
+  }
+
+  .claim__arrow {
+    display: none !important;
+  }
+
+  .banner {
+    padding: 5% 10px 0% 10px;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .banner__left__heading h1 {
+    font-size: 39px !important;
+    font-weight: 700;
+    word-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
+    line-height: 45px;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+  }
+
+  .right__side {
+    padding-top: 50px;
+    font-family: "Carmen_Sans" !important;
+    padding-left: 0px;
+  }
+
+  .join__fluffie {
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .section__five {
+    padding: 100px 50px;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .claim__text {
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .container__inner {
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .product__info__sec h1 {
+    height: 76px !important;
+    font-size: 28px !important;
+  }
+
+  .right__side h2 {
+    font-weight: 900;
+    font-size: 55px;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 1900px) {
+  .product__info__sec h1 {
+    font-size: 31px !important;
+    height: 76px !important;
+  }
+
+  .right__side h2 {
+    font-weight: 900 !important;
+    font-size: 58px !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    line-height: 1.4;
+  }
+
+  .banner__left__paragraph p {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 700px;
+    color: #565656;
+    font-size: 21px !important;
+    width: 60% !important;
+    line-height: 30px;
+    margin-top: 30px;
+    font-family: "Carmen_Sans" !important;
+  }
+}
+
+@media (min-width: 1601px) {
+  .container__inner {
+    width: 100%;
+    padding: 0px 6%;
+  }
+
+  .reviews_spacing {
+    /* padding-left: 10px !important; */
+    margin-left: 0px !important;
+  }
+
+  .ms_two {
+    margin-left: 10px !important;
+    /* margin: 0 !important; */
+    margin-right: 0px !important;
+  }
+
+  .banner {
+    padding: 5% 5% 8% 5%;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .banner__left__paragraph p {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 700px;
+    color: #565656;
+    font-size: 22px;
+    width: 70%;
+    line-height: 30px;
+    margin-top: 30px;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .claim__text {
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .claim__arrow {
+    top: 46%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 40px;
+    font-family: "Carmen_Sans" !important;
+  }
+
+  .product__info__sec h1 {
+    height: 76px;
+    font-size: 26px;
+  }
+
+  .right__side h2 {
+    font-weight: 900;
+    font-size: 50px;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    line-height: 1.4;
+  }
+
+  .ms_two {
+    margin-left: 11px !important;
+    /* margin: 0 !important; */
+    margin-right: 0px !important;
+  }
+
+  .reviews_spacing {
+    margin-left: -10px !important;
+  }
+
+  .small__text {
+    width: 85% !important;
+  }
+}
+
+.real_img {
+  margin-top: -17px !important;
+  margin-left: 5px;
+}
+
+.pros_card ul {
+  padding-left: 20px;
+}
+
+.slider_p {
+  padding: 0px 0px 0px 0px;
+}
+
+.slider_p p {
+  color: #949393;
+}
+
+.slider_p .black_color {
+  color: #312b34;
+  font-weight: bold;
+}
+
+.slider_p hr {
+  margin: 0 !important;
+}
+
+.progress_width {
+  width: 115px;
+}
+
+.slider_wrapper {
+  /* background-color: #fff; */
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  max-width: 550px;
+  margin: auto;
+}
+
+.about_us {
+  padding-left: 40px;
+}
+
+.abc {
+  padding-top: 3px;
+  padding-left: 5px;
+}
+
+.banner_arrow {
+  margin-top: -4px !important;
+}
+
+.background_div {
+  width: 510px;
+  background-color: #fff;
+  height: 540px;
+  position: absolute;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+@media (min-width: 2000px) {
+  .passioni_width {
+    width: 400px !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .product__info__sec h1 {
+    font-weight: 900;
+    font-weight: bolder;
+    line-height: 25px;
+    height: 76px !important;
+    font-size: 23px !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+  }
+
+  .banner__left__heading h1 {
+    font-size: 24px !important;
+    font-weight: 800;
+    word-spacing: 0rem;
+    letter-spacing: 0rem;
+    line-height: 30px;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+  }
+
+  .banner__left__paragraph p {
+    font-size: 18px;
+  }
+}
+.show_progress_text_mobile {
+  display: none;
+}
+@media (max-width: 550px) {
+  .product__info__sec h1 {
+    font-size: 20px !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    text-align: center;
+    width: 74%;
+    margin: auto;
+    height: 52px !important;
+    padding-top: 0px !important;
+    line-height: 28px;
+  }
+  .con_fluid {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .banner_left_wrapper {
+    background-color: #fd7791;
+    padding: 220px 0px !important;
+    margin: 0px !important;
+    height: 100vh !important;
+  }
+  .banner {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .banner {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .cstm_row {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .banner__left__heading h1 {
+    font-size: 28px !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+    font-weight: 800 !important;
+    line-height: 34px !important;
+    font-weight: bolder;
+    word-spacing: 0.1rem !important;
+    text-align: center;
+    padding-top: 20px !important;
+    letter-spacing: 0rem !important;
+  }
+  .banner__left__heading span {
+    color: #fff !important;
+  }
+  .banner_right_side {
+    display: block !important;
+    padding: 30px 0px !important;
+    margin-left: 25px !important;
+  }
+  .banner_right_side img {
+    width: 179px;
+    height: 179px;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  .product__info__sec .drunk {
+    display: block;
+    font-size: 12px !important;
+    text-align: center;
+    color: #949393;
+    font-family: "Carmen_Sans" !important;
+    padding: 10px 0px 0px 0px;
+  }
+  .text_star_center {
+    display: block !important;
+    margin-top: 10px !important;
+    text-align: center;
+  }
+  .text_star_center .abc {
+    padding-left: 0px !important;
+    font-size: 12px !important;
+  }
+  .text_star_center .mobile_star_icon {
+    margin-top: -6px !important;
+    font-size: 15px !important;
+  }
+  .show_progress_text_mobile {
+    display: block;
+  }
+  .desktop_progress {
+    display: none;
+  }
+  .show_progress_text_mobile .progrss_bar_spacing_top {
+    max-width: 265px;
+    margin: auto;
+  }
+  .show_progress_text_mobile .span_cstm .black_span {
+    font-size: 12px !important;
+    color: #000 !important;
+  }
+  .show_progress_text_mobile .progress_width {
+    width: 100px;
+    margin-right: 8px;
+    margin-left: 0px !important;
+  }
+  .show_progress_text_mobile .span_cstm {
+    font-size: 12px !important;
+    color: #7d7d7d;
+  }
+  .review_summary {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+  }
+  .positive_reviews {
+    text-align: center;
+    text-align: center;
+    font-size: 14px;
+    max-width: 331px;
+
+    margin: auto;
+  }
+  .positive_reviews span {
+    display: inline-block;
+  }
+  .banner_margin_remove {
+    padding: 0px !important;
+  }
+  .first_text_width .positive_reviews {
+    max-width: 306px !important;
+    margin: auto !important;
+    text-align: center;
+    margin-top: 15px !important;
+  }
+  .product_go_to h1 {
+    padding: 25px !important;
+  }
+  .claim_text_mobile {
+    position: initial !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+  .claim__text {
+    position: initial !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    padding-left: 30px !important;
+  }
+}

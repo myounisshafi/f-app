@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440.436" height="366.436" viewBox="0 0 440.436 366.436">
+  <g id="Group_7954" data-name="Group 7954" transform="translate(-905.486 -3880.646)">
+    <g id="Group_5473" data-name="Group 5473" transform="translate(905.486 3880.646)">
+      <g id="Group_5474" data-name="Group 5474" transform="translate(0)">
+        <g id="Group_5475" data-name="Group 5475" transform="translate(0)">
+          <g id="Group_5471" data-name="Group 5471">
+            <g id="Group_5436" data-name="Group 5436">
+              <g id="Group_5435" data-name="Group 5435">
+                <g id="Rectangle_1071" data-name="Rectangle 1071" fill="#fff" stroke="#c7c7c7" stroke-width="1">
+                  <rect width="440.436" height="366.436" stroke="none"/>
+                  <rect x="0.5" y="0.5" width="439.436" height="365.436" fill="none"/>
+                </g>
+                <text id="Filter_by" data-name="Filter by" transform="translate(35.305 14.457)" fill="#313131" font-size="25" font-family="CarmenSans-Regular, Carmen Sans"><tspan x="0" y="28">Filter by</tspan></text>
+                <g id="Icon_ionic-ios-arrow-dropdown" data-name="Icon ionic-ios-arrow-dropdown" transform="translate(396.527 38.048) rotate(180)">
+                  <path id="Path_2753" data-name="Path 2753" d="M.512.52a1.765,1.765,0,0,0,0,2.487L9.229,11.7a1.756,1.756,0,0,0,2.423.055l8.589-8.562A1.755,1.755,0,1,0,17.763.7L10.386,7.971,3,.511A1.756,1.756,0,0,0,.512.52Z" transform="translate(0 0)"/>
+                </g>
+                <text id="Price" transform="translate(35.305 88.661)" fill="#b8b8b8" font-size="25" font-family="CarmenSans-Regular, Carmen Sans"><tspan x="0" y="28">Price</tspan></text>
+                <text id="Skin_concerns" data-name="Skin concerns" transform="translate(35.305 161.404)" fill="#656565" font-size="25" font-family="CarmenSans-Regular, Carmen Sans"><tspan x="0" y="28">Skin concerns</tspan></text>
+                <line id="Line_105" data-name="Line 105" x2="369.189" transform="translate(35.624 66.713)" fill="none" stroke="#707070" stroke-width="1"/>
+                <line id="Line_106" data-name="Line 106" x2="369.189" transform="translate(35.624 143.051)" fill="none" stroke="#bbb" stroke-width="1"/>
+                <text id="Acne_38_" data-name="Acne (38)" transform="translate(93.598 232.499)" fill="#b8b8b8" font-size="22" font-family="CarmenSans-Regular, Carmen Sans"><tspan x="0" y="25">Acne (38)</tspan></text>
+                <text id="Ageing_34_" data-name="Ageing (34)" transform="translate(93.598 287.313)" fill="#b8b8b8" font-size="22" font-family="CarmenSans-Regular, Carmen Sans"><tspan x="0" y="25">Ageing (34)</tspan></text>
+              </g>
+              <g id="Rectangle_1072" data-name="Rectangle 1072" transform="translate(40.157 231.703)" fill="#fff" stroke="#707070" stroke-width="1">
+                <rect width="33.68" height="32.385" stroke="none"/>
+                <rect x="0.5" y="0.5" width="32.68" height="31.385" fill="none"/>
+              </g>
+              <g id="Rectangle_1073" data-name="Rectangle 1073" transform="translate(40.157 285.552)" fill="#fff" stroke="#707070" stroke-width="1">
+                <rect width="33.68" height="32.385" stroke="none"/>
+                <rect x="0.5" y="0.5" width="32.68" height="31.385" fill="none"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

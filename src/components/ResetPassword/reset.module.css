@@ -1,0 +1,104 @@
+.modal-header {
+  border-bottom: 0px !important;
+}
+
+.modal-footer {
+  border-top: 0 none;
+}
+.modal_body_sec {
+  max-width: 370px !important;
+  margin: auto !important;
+}
+.login_form_btn {
+  background: #fd7791 !important;
+  color: #fff !important;
+  padding: 15px 0px;
+}
+button.w-100.mt-3.login_form_btn.btn.btn-primary {
+  background: pink;
+}
+.label_hide {
+  visibility: hidden;
+}
+.register_info {
+  width: 300px;
+  margin: auto;
+}
+.register_info span {
+  color: #afafaf;
+}
+.modal_body_sec label {
+  color: #afafaf !important;
+}
+.modal_body_sec h2 {
+  font-size: 55px;
+  color: #1c1c23;
+}
+.form_wrapper label {
+  color: #afafaf !important;
+}
+.modal_body_sec p {
+  color: #afafaf;
+}
+.modal_body_sec ::placeholder {
+  color: #afafaf;
+}
+.already_account {
+  padding-top: 40px;
+}
+@media (max-width: 550px) {
+  .cstm__search {
+    position: static !important;
+    margin-left: 0 !important;
+    width: 200px !important;
+    padding: 0 !important;
+  }
+}
+@media (max-width: 1600px) {
+  .cstm__navBar {
+    padding-left: 320px !important;
+  }
+  .banner__left__paragraph p {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 10px 15px;
+    max-width: 602px;
+    width: 470px;
+    color: #565656;
+    font-size: 20px;
+  }
+  .banner__joinUs {
+    padding: 0px 4px;
+  }
+}
+.modal_width_cstm {
+  width: 67% !important;
+  margin: auto !important;
+  margin-top: auto;
+  padding: 10px 20px !important;
+  height: 480px;
+}
+.create_pass h2 {
+  text-align: center;
+  font-family: "Carmen_Sans_bold" !important;
+  color: #1c1c23;
+  opacity: 1;
+  font-size: 47px;
+}
+.modal_width_cstm p {
+  color: #9f9f9f;
+}
+.modal_width_cstm label {
+  color: #505053;
+}
+.eye_wrapper {
+  position: relative;
+}
+.eye_child {
+  position: absolute;
+  right: 7%;
+  bottom: 27%;
+  cursor: pointer;
+  color: #a5a5a5;
+}

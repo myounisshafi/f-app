@@ -1,0 +1,266 @@
+.cstm__search {
+  margin-left: 66px;
+  position: absolute;
+  left: 13%;
+}
+.navbar-brand img {
+  /* width: 89px; */
+  /* height: 49px; */
+}
+.form__group {
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+}
+.cstm__search input {
+  padding: 10px 20px !important;
+  border-radius: 70px;
+  width: 370px;
+  font-family: "Carmen_Sans" !important;
+}
+.cstm__search input::placeholder {
+  font-family: "Carmen_Sans" !important;
+  letter-spacing: 0px;
+  font-size: 19px !important;
+  color: #c4c4c4;
+}
+.container__inner {
+  width: 100%;
+  padding: 0px 140px;
+}
+.singIn {
+  text-decoration: none;
+  color: #656565;
+  font-size: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.singIn {
+  margin-top: 5px !important;
+}
+.pink__btn {
+  background: #fd7791 !important;
+  border: none !important;
+  border-radius: 25px !important;
+  font-size: 20px !important;
+  color: #fff !important;
+  padding: 5px 22px !important;
+}
+.pink__btn:hover {
+  background: #fd7791 !important;
+  color: #fff !important;
+}
+.cstm__navBar {
+  padding-left: 120px !important;
+}
+.cstm__navBar li a {
+  color: #656565;
+  font-size: 20px;
+  padding: 0px 20px !important;
+  font-family: "Carmen_Sans" !important;
+}
+
+@media (max-width: 550px) {
+  .cstm__search {
+    position: static !important;
+    margin-left: 0 !important;
+    width: 200px !important;
+    padding: 0 !important;
+  }
+  .container__inner {
+    width: 100%;
+    padding: 0px 20px !important;
+  }
+  .cstm__navBar li a {
+    padding: 6px 0px !important;
+  }
+}
+@media (max-width: 1600px) {
+  .cstm__navBar {
+    padding-left: 380px !important;
+  }
+  .banner__left__paragraph p {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 10px 15px;
+    max-width: 602px;
+    width: 470px;
+    color: #565656;
+    font-size: 20px;
+  }
+  .container__inner {
+    width: 100%;
+    padding: 0px 6%;
+  }
+  .cstm__search input {
+    padding: 10px 50px;
+    border-radius: 70px;
+    width: auto;
+    height: 45px;
+  }
+  .cstm__search {
+    margin-left: 66px;
+    position: absolute;
+    left: 16% !important;
+  }
+  .product__info__sec h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    line-height: 48px;
+    font-family: "Carmen_Sans" !important;
+  }
+  .banner__left__paragraph p {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 700px;
+    color: #565656;
+    font-size: 22px;
+    width: 90% !important;
+    line-height: 30px;
+    margin-top: 30px;
+    font-family: "Carmen_Sans" !important;
+  }
+}
+@media (min-width: 1650px) {
+  .cstm__navBar {
+    padding-left: 280px;
+  }
+  .cstm__search {
+    margin-left: 66px;
+    position: absolute;
+    left: 15% !important;
+  }
+}
+@media (max-width: 550px) {
+  .cstm__search {
+    position: static !important;
+    margin-left: 0 !important;
+    width: 190px !important;
+    padding: 0 !important;
+  }
+  .container__inner {
+    padding: 0px 20px !important;
+  }
+  .searchIcon {
+    position: absolute;
+    top: 12px;
+    right: 12px !important;
+  }
+  .cstm__navBar {
+    padding-left: 0px !important;
+  }
+  .cstm__navBar li a {
+    color: #656565;
+    font-size: 19px !important;
+    padding: 5px 0px;
+  }
+  .cstm__search input {
+    padding: 10px 50px;
+    border-radius: 70px;
+    width: 100% !important;
+    height: 38px;
+  }
+  .mobile_search_bar .header_cstm__search {
+    display: block !important;
+    margin-left: 0px;
+    width: 100% !important;
+  }
+  .pink__btn {
+    float: right !important;
+  }
+  .pink__btn {
+    background: #fd7791 !important;
+    border: none !important;
+    border-radius: 25px !important;
+    font-size: 19px !important;
+    color: #fff !important;
+    padding: 2px 16px !important;
+    font-weight: bolder;
+  }
+  .mobile_block {
+    display: block !important;
+  }
+}
+@media (min-width: 1601px) {
+  .container__inner {
+    width: 100%;
+    padding: 0px 6%;
+  }
+  .banner {
+    padding: 5% 5% 0% 5%;
+    font-family: "Carmen_Sans" !important;
+  }
+  .cstm__search input {
+    padding: 10px 40px;
+    border-radius: 70px;
+    width: 398px;
+    font-family: "Carmen_Sans" !important;
+    margin-left: 30px;
+  }
+  .cstm__navBar {
+    padding-left: 360px !important;
+  }
+}
+@media (min-width: 1701px) {
+  .header_cstm__search input {
+    padding: 10px 40px;
+    border-radius: 70px;
+    width: 395px !important;
+    font-family: "Carmen_Sans" !important;
+    margin-left: 30px;
+  }
+}
+@media (min-width: 2000px) {
+  .cstm__search input {
+    padding: 10px 40px;
+    border-radius: 70px;
+    width: 420px;
+    font-family: "Carmen_Sans" !important;
+    margin-left: 50px;
+  }
+}
+.mobile_search_bar .cstm__search {
+  display: none !important;
+}
+@media (max-width: 1000px) {
+  .cstm__search {
+    display: none !important;
+  }
+  .mobile_search_bar .cstm__search {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    position: static;
+    margin-left: 0px;
+  }
+  .mobile_search_bar .searchIcon {
+    position: absolute;
+    top: 2px !important;
+    right: 3px !important;
+    width: 34px !important;
+  }
+  .cstm__navBar {
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+  }
+  .cstm__navBar li a {
+    color: #656565;
+    font-size: 20px;
+    padding: 6px 0px !important;
+    font-family: "Carmen_Sans" !important;
+  }
+  .product__info__sec h1 {
+    font-weight: 700 !important;
+    line-height: 22px;
+    height: 76px !important;
+    font-size: 21px !important;
+    font-family: "Carmen_Sans_ExtraBold" !important;
+  }
+}

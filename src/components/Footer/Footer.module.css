@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Carmen_Sans";
+  src: url("../../../public/fonts/CarmenSans-Regular.woff2") format("woff2"),
+    url("../../../public/fonts/CarmenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Carmen_Sans_bold";
+  src: url("../../../public/fonts/CarmenSans-Bold.woff2") format("woff2"),
+    url("../../../public/fonts/CarmenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Carmen_Sans_ExtraBold";
+  src: url("../../../public/fonts/CarmenSans-ExtraBold.woff2") format("woff2"),
+    url("../../../public/fonts/CarmenSans-ExtraBold.woff") format("woff");
+}
+
+.footer_heading {
+  font-family: "Carmen_Sans_ExtraBold" !important;
+  font-size: 22px !important;
+  margin: 0 !important;
+}
+
+.social__links {
+  list-style: none;
+  /* width: 200px;
+  padding: 20px 50px;
+  margin: auto; */
+  margin: 0;
+  padding-left: 8px;
+}
+
+.social__links li {
+  margin-right: 8px;
+}
+
+.footer_icons_mobile {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .footer_icons {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer_icons_mobile {
+    display: flex;
+    float: left;
+    margin-left: 14px;
+  }
+  .footer_mobile {
+    text-align: left !important;
+    overflow: hidden !important;
+  }
+  .footer_center {
+    text-align: left !important;
+  }
+  .mx_space {
+    padding: 0px 0px !important;
+    margin: 0px 0px !important;
+  }
+  .ms_space {
+    padding: 0px 0px !important;
+    margin: 0px !important;
+    padding-left: 0px !important;
+  }
+  .footer_logo {
+    padding-left: 0px;
+    padding-top: 20px;
+  }
+  .footer_icons {
+    display: none;
+  }
+  .social__links li {
+    margin-right: 15px !important;
+  }
+  .footer_p p {
+    margin-bottom: 1px !important;
+  }
+  .footer_p a {
+    display: block !important;
+  }
+  .footer_center {
+    /* text-align: center !important; */
+  }
+  .footer__left .img_log {
+    /* margin-left: 35px !important; */
+  }
+  .mobile_link a {
+    margin-left: -20px !important;
+  }
+  .footer__left {
+    margin-left: 20px !important;
+  }
+  .footer_line_img {
+    display: none;
+  }
+  .footer_heading {
+    margin-bottom: 5px !important;
+    margin-left: -20px !important;
+  }
+  .footer_line_img a {
+    margin-left: -20px !important;
+  }
+}
+@media (max-width: 1000px) {
+  .footer_mobile {
+    overflow: hidden !important;
+  }
+}
