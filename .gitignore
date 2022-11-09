@@ -3,7 +3,6 @@ node_modules
 config
 node_modules/
 dist/
-yarn.lock
 .next
 # Compiled Java class files
 *.class
