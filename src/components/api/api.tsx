@@ -12,6 +12,7 @@ export const userPreferance = async (
   mainProduct: string,
   supplementaryProduct: string
 ) => {
+
   let request = {};
   const headers = {
     accept: "application/json",
@@ -126,7 +127,7 @@ export const loadUSerPreference = (payload) => {
   };
 
   return axios.post(
-    `${URL}/user/userPreferance`,
+    `${URL}/user/getUserPreferance`,
     JSON.stringify({
       payload,
     }),
