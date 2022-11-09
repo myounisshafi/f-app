@@ -159,7 +159,7 @@ export default () => {
                   key={index}
                   active={index === filters.currentPage}
                   onClick={handlePaginationChange(index)}
-                  id={index}
+       
                   value={index}
                   className="my-2"
                 >
