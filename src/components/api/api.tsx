@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const URL = "https://fluffie.herokuapp.com"
-const URL = "http://localhost:8000";
+export const URL = "https://fluffieapi.herokuapp.com"
+// const URL = "http://localhost:8000";
 
 export const userPreferance = async (
   phoneNumber: number,

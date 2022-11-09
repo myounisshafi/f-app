@@ -13,7 +13,7 @@ const nextConfig = {
     return [
       {
         source: "/:path*",
-        destination:  "http://localhost:8000/:path*", // Proxy to Backend
+        destination:  "https://fluffieapi.herokuapp.com/:path*", // Proxy to Backend
       },
     ];
   },

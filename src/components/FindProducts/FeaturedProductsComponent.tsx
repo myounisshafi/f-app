@@ -40,7 +40,7 @@ export default ({ featured }) => {
         }
 
         let concernTypeFound = FilterConcernTypes.find((item) =>
-          item.labels?.find((labelItem) => labelItem == label)
+          item.benefits?.find((labelItem) => labelItem.label == label)
         );
 
         if (concernTypeFound) {
