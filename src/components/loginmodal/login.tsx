@@ -29,7 +29,7 @@ function Signup(
     phone_number: "",
     password: "",
   });
-  const [value, setValue] = useState<any>("+923009683968");
+  const [value, setValue] = useState<any>("");
   const [validatePhoneField, setValidatePhoneField] = useState(false);
   const userStateData = useAppSelector(userState);
   const dispatch = useAppDispatch();
