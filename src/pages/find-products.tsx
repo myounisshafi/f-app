@@ -36,9 +36,9 @@ function FindProducts({ featured }) {
 
   const hasSelectedFilters = useMemo(() => {
    
-    
+
     if (
-      filters.skinTypeFilter != "all" ||
+      (filters.skinTypeFilter != null && filters.skinTypeFilter != "all") ||
       filters.concernTypeFilter != null ||
       filters.acneProneFilter?.dbTag != "" ||
       filters.mainProductCategory != null ||
@@ -50,11 +50,10 @@ function FindProducts({ featured }) {
     } else {
       return 0;
     }
-  }
-  , [
+  }, [
     filters.skinTypeFilter,
     filters.concernTypeFilter,
-    filters.acneProneFilter?.dbTag ,
+    filters.acneProneFilter?.dbTag,
     filters.mainProductCategory,
     filters.keyword,
     filters.priceRangeSelected,

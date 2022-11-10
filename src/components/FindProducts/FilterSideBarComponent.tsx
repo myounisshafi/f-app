@@ -62,6 +62,10 @@ function Sidebar() {
   };
 
   const skinTypeFliterChanged = (e) => {
+  
+    // if(e.target.value == "all")
+    // dispatch(updateSkinTypeFilter(null));
+    // else
     dispatch(updateSkinTypeFilter(e.target.value));
   };
 
@@ -331,7 +335,7 @@ function Sidebar() {
                 id={item.key}
                 value={item.dbTag}
                 onChange={skinTypeFliterChanged}
-                checked={item.dbTag == filters.skinTypeFilter}
+                checked={(item.dbTag == filters.skinTypeFilter )}
               />
             ))}
           </Form>

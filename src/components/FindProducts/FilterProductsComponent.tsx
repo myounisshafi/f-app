@@ -41,12 +41,15 @@ export default () => {
   };
   const getBenefitsLables = () => {
     const benefitsLabels = [];
-    if (filters.skinTypeFilter)
-      benefitsLabels.push(
-        FilterLabelBenefitsTitles[filters.skinTypeFilter] ??
-          filters.skinTypeFilter ??
-          null
-      );
+    if (filters.skinTypeFilter) {
+      if (filters.skinTypeFilter != "all")
+        benefitsLabels.push(
+          FilterLabelBenefitsTitles[filters.skinTypeFilter] ??
+            filters.skinTypeFilter ??
+            null
+        );
+    }
+
     if (filters.acneProneFilter.dbTag)
       benefitsLabels.push(
         FilterLabelBenefitsTitles[filters.acneProneFilter.dbTag] ??
@@ -72,8 +75,6 @@ export default () => {
         </span>
       );
     });
-
-  
   };
   const getHeaderText = () => {
     if (
@@ -90,22 +91,25 @@ export default () => {
         </h4>
       );
     } else {
-      return (
-        <h4 className="font-size-16 mt-5 mx-3">
-          {filters.concernTypeFilter && (
-            <>
-              Concerned about&nbsp;
-              <span className="text-danger font-weight-bold">
-                {` ${filters.concernTypeFilter.title}`}
-              </span>
-              ?
-            </>
-          )}{" "}
-          Hi, these {getCategoryTtitle()} have the most reviews that mention
-          good for&nbsp;
-          {getBenefitsLables()}.
-        </h4>
-      );
+      const benfits = getBenefitsLables();
+      if (benfits?.length > 0) {
+        return (
+          <h4 className="font-size-16 mt-5 mx-3">
+            {filters.concernTypeFilter && (
+              <>
+                Concerned about&nbsp;
+                <span className="text-danger font-weight-bold">
+                  {` ${filters.concernTypeFilter.title}`}
+                </span>
+                ?
+              </>
+            )}{" "}
+            Hi, these {getCategoryTtitle()} have the most reviews that mention
+            good for&nbsp;
+            {benfits}.
+          </h4>
+        );
+      }
     }
 
     return "";
