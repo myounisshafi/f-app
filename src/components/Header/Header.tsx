@@ -24,7 +24,7 @@ import {
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { isUserLoginSelector, logoutUser } from "../../redux/userSlice";
 import { searchProducts } from "../../redux/productSlice";
-import { setSearchKeyword } from "../../redux/filtersSlice";
+import { setSearchKeyword, setUserPrefernce } from "../../redux/filtersSlice";
 
 function Header(props: { state: unknown; setState: (arg0: boolean) => void }) {
   const [modalShow, setModalShow] = useState(false);
@@ -220,7 +220,9 @@ function Header(props: { state: unknown; setState: (arg0: boolean) => void }) {
 
   const handleHeaderLoginBtn = () => {
     if (isUserLogin) {
+      dispatch(setUserPrefernce(null));
       dispatch(logoutUser());
+      
     } else {
       setModalShow(true);
     }

@@ -2,7 +2,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import type { AppState } from "./store";
-import { FilterAcneProneTypes } from "../shared/mocks/consts";
+import {
+  FilterAcneProneTypes,
+  FilterConcernTypes,
+  FilterSkinTypes,
+} from "../shared/mocks/consts";
 import { filterStatsApi, loadUSerPreference } from "../components/api/api";
 
 export interface FiltersState {
@@ -21,21 +25,49 @@ export interface FiltersState {
   currentPage: number;
 }
 
-const initialState: FiltersState = {
-  isLodingFiltersStatics: false,
-  skinTypeFilter: null,
-  concernTypeFilter: null,
-  concernTypeBenefitFilter: null,
-  acneProneFilter: FilterAcneProneTypes[0],
-  keyword: "",
-  filtersStats: null,
-  priceRangeSelected: null,
-  mainProductCategory: null,
-  subProductCategory: null,
-  userPrefernce: null,
+const getInitalState = () => {
+  if (typeof window !== "undefined") {
+    const preference = JSON.parse(localStorage.getItem("preference") ?? "{}");
 
-  currentPage: 0,
+    const concern = FilterConcernTypes.find(
+      (item) => item.key == preference?.concern
+    );
+    return {
+      isLodingFiltersStatics: false,
+      skinTypeFilter:
+        FilterSkinTypes.find((item) => item.key == preference?.skin_type)
+          ?.dbTag ?? null,
+      concernTypeFilter: concern ?? null,
+      concernTypeBenefitFilter: concern?.benefits ?? null,
+      acneProneFilter: FilterAcneProneTypes[0],
+      keyword: "",
+      filtersStats: null,
+      priceRangeSelected: null,
+      mainProductCategory: null,
+      subProductCategory: null,
+      userPrefernce: null,
+
+      currentPage: 0,
+    };
+  } else {
+    return {
+      isLodingFiltersStatics: false,
+      skinTypeFilter: null,
+      concernTypeFilter: null,
+      concernTypeBenefitFilter: null,
+      acneProneFilter: FilterAcneProneTypes[0],
+      keyword: "",
+      filtersStats: null,
+      priceRangeSelected: null,
+      mainProductCategory: null,
+      subProductCategory: null,
+      userPrefernce: null,
+
+      currentPage: 0,
+    };
+  }
 };
+const initialState: FiltersState = getInitalState();
 
 export const filtersSlice = createSlice({
   name: "filters",
@@ -84,7 +116,30 @@ export const filtersSlice = createSlice({
       };
     },
     setUserPrefernce: (state, action) => {
-      state.userPrefernce = action.payload;
+      if (state.userPrefernce == null) {
+
+        state.skinTypeFilter =
+          FilterSkinTypes.find((item) => item.key == action.payload?.skin_type)
+            ?.dbTag ?? null;
+
+        const concern = FilterConcernTypes.find(
+          (item) => item.key == action.payload?.concern
+        );
+
+        state.concernTypeFilter = concern ?? null;
+        state.concernTypeBenefitFilter = concern?.benefits ?? null;
+        state.userPrefernce = action.payload;
+      }
+    
+      else{
+        state.userPrefernce = action.payload;
+      }
+      if (typeof window !== "undefined") {
+        localStorage.setItem(
+          "preference",
+          action.payload ? JSON.stringify(action.payload) : null
+        );
+      }
     },
     setCurrentPage: (state, action) => {
       state.currentPage = action.payload;
@@ -147,7 +202,7 @@ export const getFiltersStats = (abortControler) => {
     if (stateFilters.skinTypeFilter)
       requestPayLoad.lables.push(stateFilters.skinTypeFilter);
 
-   if (stateFilters.concernTypeBenefitFilter?.length > 0) {
+    if (stateFilters.concernTypeBenefitFilter?.length > 0) {
       stateFilters.concernTypeBenefitFilter.map((item) => {
         requestPayLoad.lables.push(item.label);
       });
@@ -183,7 +238,6 @@ export const getFiltersStats = (abortControler) => {
           dispatch(filtersSlice.actions.setFiltersStats(null));
         }
 
-        // console.log("1dispatch(getUserPreference());")
         dispatch(getUserPreference());
       })
       .catch((error) => {
@@ -196,7 +250,6 @@ export const getUserPreference = () => {
   return async (dispatch, getState) => {
     let userState = getState().user;
 
-    // console.log("2dispatch(getUserPreference());",userState)
     if (userState?.userToken) {
       const requestPayLoad: any = {};
 
@@ -250,6 +303,7 @@ export const {
   setSubCategoryFilter,
   setAcnetypeFilter,
   setCurrentPage,
+  setUserPrefernce,
 } = filtersSlice.actions;
 
 export const filtersState = (state: AppState) => state.filters;

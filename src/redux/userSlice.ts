@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import type { AppState } from "./store";
 import { login } from "../components/api/api";
+import { getUserPreference } from "./filtersSlice";
 
 export type UserPreference = {};
 export interface UserState {
@@ -53,7 +54,11 @@ export const userSlice = createSlice({
         localStorage.setItem('token',action.payload.userToken)
       } 
     },
+    
     logoutUser: (state) => {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('token')
+      }
       state.userToken = null;
       state.message = null;
     },
@@ -73,6 +78,7 @@ export const loginUser = (phoneNumber: number, password: string) => {
             userToken: loginInfo?.data?.token ?? null,
           })
         );
+        dispatch(getUserPreference());
       })
       .catch((error) => {
         dispatch(

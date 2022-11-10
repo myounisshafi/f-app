@@ -26,7 +26,7 @@ export const FilterSkinTypes = [
   {
     key: "all",
     title: "All",
-    dbTag: "",
+    dbTag: "all",
   },
   {
     key: "dry",
@@ -102,6 +102,7 @@ export const FilterLabelBenefitsTitles = {
   "firming/tightening": "firmer and tighter skin",
   "acne skin (positive)": "acne skin",
 };
+
 export const FilterConcernTypes = [
   {
     key: "all",
